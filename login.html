@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="/fonts/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/fonts/font-spacewalk/css/spacewalk-font.css">
+	<link rel="stylesheet/less" href="/css/spacewalk.less">
+	<!--[if IE 7]>
+ 		<link rel="stylesheet" href="/font-awesome/css/font-awesome-ie7.min.css">
+	<![endif]-->
+	<script src="/js/less.js"></script>
+	<script src="/js/jquery.js"></script>
+	<script src="/js/html5shiv.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/assets/css/normalize.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script>
+	$(document).on("ready", function(){
+		$("section").removeClass("col-md-10").addClass("col-md-8 col-md-offset-2");
+	});
+	</script>
+	<title>Spacewalk</title>
+</head>
+<body>
+	<header>
+		<div class="row">
+			<div class="col-md-3 logo">
+				<img src="img/logo_vendor.png" />
+				<img src="img/logo_product.png" />
+			</div>
+			<div class="col-md-9 text-right">
+				<ul class="nav nav-pills">
+					<li><a href="#">English (change)</a></li>
+				</ul>
+				<ul class="nav nav-pills">
+					<li><a href="#">Knowledgebase </a></li>
+					<li><a href="#">Documentation</a></li>
+				</ul>
+				<ul class="nav nav-pills">
+					<li><a href="#"><i class="icon-user"></i>: admin </a></li>
+					<li><a href="#"><i class="icon-sitemap"></i>: Spacewalk Default Organization </a></li>
+					<li><a href="#"><i class="icon-cogs"></i></a></li>
+					<li><a href="#"><i class="icon-signout"></i></a></li>
+				</ul>
+				<form class="form-inline hidden-xs" role="form">
+					<div class="form-group">
+						<select name="search_type" class="form-control input-sm">
+							<option value="systems">Systems</option>
+							<option value="packages">Packages</option>
+							<option value="errata">Errata</option>
+							<option value="docs">Documentation</option>
+					    </select>
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="exampleInputEmail2">Search</label>
+						<input type="search" class="form-control input-sm" id="Search" placeholder="Search">
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-info input-sm"><i class="icon-search"></i>Search</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<nav role="navigation" class="navbar navbar-inverse spacewalk-main-nav">
+			<ul class="nav navbar-nav">
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+				<li><a href="#">Link</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="row body-container">
+		<aside>
+			<nav id="sidenav">
+
+
+
+
+			</nav>
+		</aside>
+		<section class="col-md-10 text-center">
+			<h1>Wellcome to Spacewalk</h1>
+			<p>Spacewalk is an open source (GPLv2) Linux systems management solution. Below are some links that should prove useful if you have any questions regarding your Spacewalk server.</p>
+			<form role="form" id="loginForm" class="form-horizontal col-md-6 col-md-offset-3 text-left" method="post" action="/rhn/LoginSubmit.do">
+			    <input type="hidden" name="csrf_token" value="7092206047513696686">
+			    <div class="form-group">
+					<label for="username-field" class="col-xs-5 control-label">Spacewalk Login: </label>
+			        <div class="col-xs-7">
+			        	<input type="text" id="username-field" class="form-control" name="username" maxlength="63" tabindex="1" placeholder="Username">
+			        </div>
+			    </div>
+
+			    <div class="form-group">
+			    	<label for="password-field" class="col-xs-5 control-label">Password: </label>
+			    	<div class="col-xs-7">
+			        	<input type="password" class="form-control" id="password-field" name="password" maxlength="32" tabindex="2">
+			        </div>
+			    </div>
+
+			    <div class="text-right">
+				    <input type="hidden" name="login_cb" value="login">
+				    <input type="submit" tabindex="3" class="btn btn-info" value="&nbsp;Sign In&nbsp;" id="login">
+			    </div>
+			</form>
+			<div class="col-md-6 col-md-offset-3 text-left">
+				<p>For details on Spacewalk, please visit our web-site at <a href="#">http://www.spacewalkproject.org/</a>.</p>
+				<p>For details on interacting with the Spacewalk community, please visit us at <a href="#">http://www.spacewalkproject.org/communicate.html</a>.</p>
+			</div>
+		</section>
+	</div>
+	<footer class="row">
+		<div class="col-md-2"></div>
+		<div class="col-md-8 text-center">
+			<p>Copyright Notice - Spacewalk theme Bootstrap 1.0</p>
+		</div>
+		<div class="col-md-2 text-right"><img src="img/logo_vendor.png" /></div>
+	</footer>
+</body>
+</html>
