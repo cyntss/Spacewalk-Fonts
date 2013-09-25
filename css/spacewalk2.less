@@ -109,6 +109,10 @@ section{
 header .row{
 	margin: 0 1em 
 }
+header .row [class*="col-md"]{
+	padding-right: 0;
+	padding-left: 0
+}
 header .logo{
 	padding-top: 1.4em;
 }
@@ -206,17 +210,13 @@ header .navbar{
 	min-height: .5em;
 }
 
-/* Systems selector inside the search form in the header */
-section #bar{
-	width: 100%;
-	height: 2.7em
+/* Systems selector inside the main menu in the header */
+header #bar{
+	color: #fff;
 }
-section #bar .spacewalk-bar{
+header #bar .spacewalk-bar{
 	padding: .5em 1.2em;
-	background: #fff;
-	border:1px solid #ccc;
 	text-align: right;
-	border-radius: 0 0 4px 4px
 }
 
 /* systems selector */
@@ -309,6 +309,9 @@ section #bar .spacewalk-bar{
 aside ul > ul li{
 	list-style: none;
 	padding: 0
+}
+aside .nav > li > a{
+	padding: .4em 1em
 }
 
 /* TABLES */
@@ -410,29 +413,3 @@ h1 .icon-stack{
 .spacewalk-content-nav .nav.nav-tabs li.active a{
 	background: #dddddd;
 }
-
-/*FOR THE NEW TOOLBAR ONLY...OTHERWISE DELETE this */
-
-#spacewalk-bar .btn{
-	border-radius: 0 0 4px 4px;
-}
-#spacewalk-bar .btn-group{
-	margin-right: .7em
-}
-#spacewalk-bar .dropdown-menu > li > a.button:first-of-type{
-	color: #ffffff;
-	background-color: #5bc0de;
-	border-color: #46b8da;
-	padding: .2em .6em;
-	border-radius: 4px;
-	margin: 0 .4em;
-	display: inline-block;
-}
-#spacewalk-bar .dropdown-menu > li > a.button:last-of-type{
-	color: #333;
-	background-color: #e2e2e2;
-	border-color: #d4d4d4;
-	padding: .2em .6em;
-	border-radius: 4px;
-	display: inline-block;
-}‚

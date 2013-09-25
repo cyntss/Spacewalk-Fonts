@@ -11,8 +11,32 @@
 	<script src="/js/jquery.js"></script>
 	<script src="/js/html5shiv.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="/assets/css/normalize.css">
+	<link rel="stylesheet" href="/css/normalize.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript">
+		$(document).on("ready", function(){
+			//this is the effect for the UL lists in the vertical menu in the left
+			$("#sidenav ul>ul").hide();
+			$("#sidenav li").attr('href', '#').on("click", function(){
+				$(this).next("ul").slideToggle();
+				$(this).toggleClass('active');
+				$(this).next("a").toggleClass('active');
+			});
+			//TOOLBARS
+			//I'll give some actions to the clear button
+			$("#clearbtn").on("click",function(event) {
+				/* Act on the event */
+				$("#toolbar-systems").animate({
+					"top": "-=50px",
+					"opacity": "0"},
+					400, function() {
+					/* stuff to do after animation is complete */
+					$("#toolbar-systems").hide();
+				});
+			});
+			//I will take the new toolbars generated and reposition them in the top bar together with the systems selected bar
+		});
+	</script>
 	<title>Spacewalk</title>
 </head>
 <body>
@@ -80,36 +104,21 @@
 				  	<li><a href="#">Your preferences</a></li>
 				  </ul>
 				  <li><a href="#">Your preferences</a></li>
+				  <ul class="nav nav-pills nav-stacked">
+				  	<li class="active"><a href="#">Your preferences</a></li>
+				  	<ul class="nav nav-pills nav-stacked">
+					  	<li class="active"><a href="#">Your preferences</a></li>
+					  	<li><a href="#">Your preferences</a></li>
+					  	<li><a href="#">Your preferences</a></li>
+				    </ul>
+				  	<li><a href="#">Your preferences</a></li>
+				  	<li><a href="#">Your preferences</a></li>
+				  </ul>
 				  <li><a href="#">Locale preferences</a></li>
 				  <li><a href="#">Subscriptions management</a></li>
 				  <li><a href="#">Organization trust</a></li>
 				</ul>
 			</nav>
-			<div class="sideleg">
-			  <h2><bean:message key="yourrhn-legend.jsp.title"/></h2>
-			  <ul>
-			  <li><img src="/img/icon_up2date.gif" alt="" /><bean:message key="system-legend.jsp.fully"/></li>
-			  <li><img src="/img/icon_crit_update.gif" alt="" /><bean:message key="system-legend.jsp.critical"/></li>
-			  <li><img src="/img/icon_reg_update.gif" alt="" /><bean:message key="system-legend.jsp.updates"/></li>
-			  <li><img src="/img/icon_checkin.gif" alt="" /><bean:message key="system-legend.jsp.notcheckingin"/></li>
-			  <rhn:require acl="org_entitlement(sw_mgr_enterprise)">
-			  <li><img src="/img/icon_locked.gif" alt="" /><bean:message key="system-legend.jsp.locked"/></li>
-			  </rhn:require>
-			  <rhn:require acl="org_entitlement(rhn_provisioning)">
-			  <li><img src="/img/icon_kickstart_session.gif" alt="" /><bean:message key="system-legend.jsp.kickstarting"/></li>
-			  </rhn:require>
-			  <li><img src="/img/icon_pending.gif" alt="" /><bean:message key="system-legend.jsp.pending"/></li>
-			  <li><img src="/img/rhn-listicon-error.gif" alt="" /><bean:message key="yourrhn-legend.jsp.failedactions"/></li>
-			  <li><img src="/img/rhn-listicon-ok.gif" alt="" /><bean:message key="yourrhn-legend.jsp.completedactions"/></li>
-			<rhn:require	acl="show_monitoring();"
-							mixins="com.redhat.rhn.common.security.acl.MonitoringAclHandler">
-			  <li><img src="/img/icon_subicon_monitoring.gif" alt="" /><bean:message key="system-legend.jsp.monitoring"/></li>
-			  </rhn:require>
-			  <li><img src="/img/wrh-security.gif" alt="" /><bean:message key="errata-legend.jsp.security"/></li>
-			  <li><img src="/img/wrh-bug.gif" alt="" /><bean:message key="errata-legend.jsp.bugfix"/></li>
-			  <li><img src="/img/wrh-product.gif" alt="" /><bean:message key="errata-legend.jsp.enhancement"/></li>
-			  </ul>
-			</div>
 			<div class="sideleg">
 				<h4>Overview Legend</h4>
 				<ul>
@@ -130,19 +139,47 @@
 		</aside>
 		<section class="col-md-10">
 			<div id="bar">
-				<div class="spacewalk-bar">
-			        <span id="header_selcount">
-			          No systems selected
-			        </span>
-			        <a class="button" href="/rhn/ssm/index.do">
-			        Manage
-			        </a>
-			        <a class="button" href="/rhn/systems/Overview.do?empty_set=true&amp;return_url=%2Frhn%2Fsoftware%2Fchannels%2FAll.do">
-			        Clear
-			        </a>
+			    <div id="spacewalk-bar">
+					<div id="toolbar-systems" class="btn-group pull-right">			    	
+						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+					        <span class="badge">20 </span> <i class="icon-desktop"></i>
+				    	</button>
+						<ul class="dropdown-menu">
+						    <li>
+						    	<a class="button" href="#">
+						        Manage
+						        </a>
+						        <a class="button" id="clearbtn" href="#">
+						        Clear
+						        </a>
+						    </li>
+						</ul>
+					</div>					
+					<div id="toolbar-1" class="btn-group pull-right">			    	
+						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+					        Menu title <i class="icon-code-fork"></i>
+				    	</button>
+						<ul class="dropdown-menu">
+						    <li><a class=""><i class="icon-plus"></i>Add</a></li>
+						    <li><a class=""><i class="icon-trash"></i>Remove</a></li>
+						    <li><a class=""><i class="icon-ok"></i>Upload</a></li>
+						</ul>
+					</div>					
+					<div id="toolbar-2" class="btn-group pull-right">			    	
+						<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+					        More menues <i class="icon-umbrella"></i>
+				    	</button>
+						<ul class="dropdown-menu">
+						    <li><a class=""><i class="icon-plus"></i>Add</a></li>
+						    <li><a class=""><i class="icon-trash"></i>Remove</a></li>
+						    <li><a class=""><i class="icon-ok"></i>Upload</a></li>
+						</ul>
+					</div>
 			    </div>
 			</div>
-			<h1><i class="icon-dashboard"></i>Overview </h1>
+			<h1>
+				<i class="icon-dashboard"></i>Overview <span class="icon-stack"><i class="icon-circle icon-stack-base"></i><i class="icon-question icon-light"></i></span>
+			</h1>
 			<div class="row">
 				<div class="col-md-6" id="tasks-pane">
 					<form method="post" name="rhn_list" action="/YourRhn.do">
