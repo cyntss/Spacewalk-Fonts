@@ -3,7 +3,7 @@
 <head>
 	<link rel="stylesheet" href="/fonts/font-awesome/css/font-awesome.css">
 	<link rel="stylesheet" href="/fonts/font-spacewalk/css/spacewalk-font.css">
-	<link rel="stylesheet/less" href="/css/bootstrap/less/spacewalk.less">
+	<link rel="stylesheet/less" href="/css/spacewalk.less">
 	<!--[if IE 7]>
  		<link rel="stylesheet" href="/font-awesome/css/font-awesome-ie7.min.css">
 	<![endif]-->
@@ -11,12 +11,11 @@
 	<script src="/js/jquery.js"></script>
 	<script src="/js/html5shiv.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="/assets/css/normalize.css">
+	<link rel="stylesheet" href="/css/normalize.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Spacewalk</title>
 </head>
 <body>
-
 	<div class="container">
 		<h1>This is a test of Twitter Bootstrap...and it works!</h1>
 		<a class="btn">Hello</a>
@@ -28,53 +27,249 @@
 		<h2>Trying FontAwesome</h2>
 		<div class="btn btn-success"><i class="icon-road icon-2x"></i> Icon from FontAwesome</div>
 		<hr>
-		<h2>
-			Table with border
-		</h2>
-		<table class="table table-bordered table-hover table-condensed">
-			<thead>
-				<tr>
-					<th>cel 1</th>
-					<th>cel 2</th>
-					<th>cel 3</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>text 1 text 1 text 1 text 1 text 1 </td>
-					<td>text 2 text 2 text 2 text 2 text 2 text 2 text 2 </td>
-					<td>text 3 text 3 </td>
-				</tr>
-			</tbody>
-		</table>
-		<hr>
-		<h2>
-			Table with NO borders (for inner tables)
-		</h2>
-		<table class="table table-hover table-condensed">
-			<thead>
-				<tr>
-					<th>cel 1</th>
-					<th>cel 2</th>
-					<th>cel 3</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>text 1 text 1 text 1 text 1 text 1 </td>
-					<td>text 2 text 2 text 2 text 2 text 2 text 2 text 2 </td>
-					<td>text 3 <a href="#">This is a link</a> </td>
-				</tr>
-			</tbody>
-		</table>
-		<hr>
 		<a href="#">This is a link</a>
+		<hr />
+		<h2>Tables: using class:spacewalk-table table-striped</h2>
+		<table class="spacewalk-table table-striped">
+		  <thead class="shadowText">
+		    <tr>
+		      <th scope="col" abbr="Date">Fecha</th>
+		      <th scope="col" abbr="Description">Movimiento</th>
+		      <th scope="col" abbr="Ammount">Importe</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong><br>
+		        Descripcion del movimiento (si es necesario)
+		      </td>
+		      <td><p>$10</p></td>
+		    </tr>
+		    <tr>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong><br>
+		        Descripcion del movimiento (si es necesario)
+		      </td>
+		      <td><p>$10</p></td>
+		    </tr>
+		    <tr>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong><br>
+		        Descripcion del movimiento (si es necesario)
+		      </td>
+		      <td><p>$10</p></td>
+		    </tr>
+		  </tbody>
+		</table>
+		<h1>table responsive</H1>
+		<table class="spacewalk-table">
+		  <thead class="shadowText">
+		    <tr>
+		      <th scope="col" abbr="Date">Fecha</th>
+		      <th scope="col" abbr="Date">Fecha</th>
+		      <th scope="col" abbr="Date">Fecha</th>
+		      <th scope="col" abbr="Date">Fecha</th>
+		      <th scope="col" abbr="Description">Movimiento</th>
+		      <th scope="col" abbr="Ammount">Importe</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong>
+		      </td>
+		      <td><p>$10</p></td>
+		    </tr>
+		    <tr>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong>
+		      </td>
+		      <td><p>$10</p></td>
+		    </tr>
+		    <tr>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong>
+		      </td>
+		      <td><p>$10</p></td>
+		    </tr>
+		  </tbody>
+		</table>
+
+		<hr />
+		<h2>Tables: XS size - Class: spacewalk-table-xs</h2>
+		<table class="spacewalk-table spacewalk-table-xs">
+		  <thead>
+		    <tr>
+		      <th scope="col" abbr="Date">Fecha</th>
+		      <th scope="col" abbr="Description">Movimiento</th>
+		      <th scope="col" abbr="Ammount">Importe</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong><br>
+		        Descripcion del movimiento (si es necesario)
+		      </td>
+		      <td><p>$10</p></td>
+		    </tr>
+		    <tr>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong><br>
+		        Descripcion del movimiento (si es necesario)
+		      </td>
+		      <td><p>$10</p></td>
+		    </tr>
+		    <tr>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong><br>
+		        Descripcion del movimiento (si es necesario)
+		      </td>
+		      <td><p>$10</p></td>
+		    </tr>
+		  </tbody>
+		</table>
+		<hr>
+		<table class="spacewalk-table spacewalk-table-xs">
+		  <thead class="shadowText">
+		    <tr>
+		      <th scope="col" abbr="Date">Fecha</th>
+		      <th scope="col" abbr="Description">Movimiento</th>
+		      <th scope="col" abbr="Ammount">Importe</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong>
+		      </td>
+		      <td><p>$10</p></td>
+		    </tr>
+		    <tr>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong>
+		      </td>
+		      <td><p>$10</p></td>
+		    </tr>
+		    <tr>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong>
+		      </td>
+		      <td><p>$10</p></td>
+		    </tr>
+		  </tbody>
+		</table>
+		<hr>
+		<table class="spacewalk-table">
+			<thead>
+				<tr>
+					<th>one column</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						One register
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr>
+		<h2>Table without any style</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Title here</th>
+					<th>Title here</th>
+					<th>Title here</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>information of the field</td>
+					<td>information of the field</td>
+					<td>information of the field</td>					
+				</tr>
+				<tr>
+					<td>information of the field</td>
+					<td>information of the field</td>
+					<td>information of the field</td>					
+				</tr>
+			</tbody>
+		</table>
+		<hr>
+		<h2>Table with Bootstrap styles</h2>
 	</div>
+	<br />
+	<footer>
+		<div class="container">
+			My UI for SUSE ;)
+		</div>
+	</footer>
 
-
-
-	<header>ss</header>
-	<div class="container"></div>
-	<footer>ss</footer>
 </body>
 </html>

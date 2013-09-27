@@ -159,7 +159,7 @@
 			<div class="row">
 				<div class="col-md-6" id="tasks-pane">
 					<form method="post" name="rhn_list" action="/YourRhn.do">
-						<table cellspacing="0" cellpadding="0" class="table table-bordered">
+						<table class="spacewalk-table">
 
 							<thead>
 							<tr class="active">
@@ -207,7 +207,20 @@
 				</div>
 				<div class="col-md-6" id="inactive-systems-pane"><div class="">
 				  <form method="post" name="rhn_list" action="/YourRhn.do">
-					  <table cellspacing="0" cellpadding="0" class="table table-bordered"><thead><tr><th style="text-align:left;">Inactive Systems</th></tr><tr class="list-row-odd"><td style="padding-bottom: 24px;" class="first-column last-column"><strong>No inactive systems.</strong> <p>All of your systems are actively checking into Spacewalk at this time. You can view a list of all of your systems at <strong><a href="/rhn/systems/SystemList.do">Systems &gt; All</a></strong>.</p></td></tr></thead></table>
+					  <table cellspacing="0" cellpadding="0" class="spacewalk-table">
+					  	<thead>
+					  		<tr>
+					  			<th>Inactive Systems</th>
+					  		</tr>
+					  	</thead>
+					  	<tbody>
+					  		<tr class="list-row-odd">
+					  			<td>
+					  				<strong>No inactive systems.</strong> <p>All of your systems are actively checking into Spacewalk at this time. You can view a list of all of your systems at <strong><a href="/rhn/systems/SystemList.do">Systems &gt; All</a></strong>.</p>
+					  			</td>
+					  		</tr>
+					  	</tbody>
+					  </table>
 					</form>
 				  </div>
 				</div>

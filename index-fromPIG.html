@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" href="/fonts/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="/fonts/font-spacewalk/css/spacewalk-font.css">
+	<link rel="stylesheet/less" href="/css/spacewalk.less">
+	<!--[if IE 7]>
+ 		<link rel="stylesheet" href="/font-awesome/css/font-awesome-ie7.min.css">
+	<![endif]-->
+	<script src="/js/less.js"></script>
+	<script src="/js/jquery.js"></script>
+	<script src="/js/html5shiv.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="/css/normalize.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript">
+		$(document).on("ready", function(){
+			$("#sidenav ul>ul").hide();
+			$("#sidenav li").attr('href', '#').on("click", function(){
+				$(this).next("ul").slideToggle();
+				$(this).toggleClass('active');
+				$(this).next("a").toggleClass('active');
+			});
+			$("#clearbtn").click(hidesystemtool);
+			function hidesystemtool(){
+				$("#bar").animate({
+					"top": "-=50px",
+					"opacity": "0"},
+					300, function() {
+					/* stuff to do after animation is complete */
+					$(this).hide();
+				});
+			}
+		});
+	</script>
+	<title>Spacewalk</title>
+	</head>
+	<body>
+<header>
+      <div class="row">
+    <div class="col-md-3 logo"> <img src="img/logo_vendor.png" /> <img src="img/logo_product.png" /> </div>
+    <div class="col-md-9 text-right">
+          <ul class="nav nav-pills">
+        <li><a href="#">English (change)</a></li>
+      </ul>
+          <ul class="nav nav-pills">
+        <li><a href="#">Knowledgebase </a></li>
+        <li><a href="#">Documentation</a></li>
+      </ul>
+          <ul class="nav nav-pills">
+        <li><a href="#"><i class="icon-user"></i>admin </a></li>
+        <li><a href="#"><i class="icon-sitemap"></i>Spacewalk Default Organization </a></li>
+        <li><a href="#"><i class="icon-cogs"></i></a></li>
+        <li><a href="login.html"><i class="icon-signout"></i></a></li>
+      </ul>
+          <form class="form-inline hidden-xs" role="form">
+        <div class="form-group">
+              <select name="search_type" class="form-control input-sm">
+            <option value="systems">Systems</option>
+            <option value="packages">Packages</option>
+            <option value="errata">Errata</option>
+            <option value="docs">Documentation</option>
+          </select>
+            </div>
+        <div class="form-group">
+              <label class="sr-only" for="exampleInputEmail2">Search</label>
+              <input type="search" class="form-control input-sm" id="Search" placeholder="Search">
+            </div>
+        <div class="form-group">
+              <button type="submit" class="btn btn-info input-sm"><i class="icon-search"></i></button>
+            </div>
+      </form>
+        </div>
+  </div>
+      <nav role="navigation" class="navbar navbar-inverse spacewalk-main-nav">
+    <ul class="nav navbar-nav">
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+        </ul>
+    <div id="bar">
+          <div class="spacewalk-bar pull-right"> <span id="header_selcount"> <span class="badge">20 </span> systems selected </span> <a class="button" href="#"> Manage </a> <a class="button" id="clearbtn" href="#"> Clear </a> </div>
+        </div>
+  </nav>
+    </header>
+    <div class="row body-container">
+    <aside class="col-md-2">
+        <nav id="sidenav">
+              <ul class="nav nav-pills nav-stacked">
+            <li class="active"><i class=""></i><a href="#">Overview</a></li>
+            <li><a href="#">Your account</a></li>
+            <ul class="nav nav-pills nav-stacked">
+                  <li><a href="#">Your preferences</a></li>
+                  <ul class="nav nav-pills nav-stacked">
+                <li><a href="#">Your preferences</a></li>
+                <li><a href="#">Your preferences</a></li>
+                <li><a href="#">Your preferences</a></li>
+              </ul>
+                  <li><a href="#">Your preferences</a></li>
+                  <li><a href="#">Your preferences</a></li>
+                </ul>
+            <li><a href="#">Your preferences</a></li>
+            <ul class="nav nav-pills nav-stacked">
+                  <li class="active"><a href="#">Your preferences</a></li>
+                  <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#">Your preferences</a></li>
+                <li><a href="#">Your preferences</a></li>
+                <li><a href="#">Your preferences</a></li>
+              </ul>
+                  <li><a href="#">Your preferences</a></li>
+                  <li><a href="#">Your preferences</a></li>
+                </ul>
+            <li><a href="#">Locale preferences</a></li>
+            <li><a href="#">Subscriptions management</a></li>
+            <li><a href="#">Organization trust</a></li>
+          </ul>
+            </nav>
+        <div class="sideleg">
+        <h4>Overview Legend</h4>
+        <ul>
+              <li><i class="icon-ok-sign"></i>OK</li>
+              <li><i class="icon-exclamation-sign"></i>Critical</li>
+              <li><i class="icon-warning-sign"></i>Warning</li>
+              <li><i class="spacewalk-icon-unknown-system"></i>Unknown</li>
+              <li><i class="spacewalk-icon-locked-system"></i>Locked</li>
+              <li><i class="spacewalk-icon-autoinstalling"></i>Kickstarting</li>
+              <li><i class="icon-flag"></i>Pending Actions</li>
+              <li><i class="icon-remove-circle"></i>Failed Actions</li>
+              <li><i class="icon-ok-circle"></i>Completed Actions</li>
+              <li><i class="icon-shield"></i>Security</li>
+              <li><i class="icon-bug"></i>Bug Fix</li>
+              <li><i class="spacewalk-icon-enhancement"></i>Enhancement</li>
+            </ul>
+        <div>
+      </aside>
+      <section class="col-md-10">
+        <div class="spacewalk-toolbar pull-right">
+          <a class=""><i class="icon-plus"></i>Add</a>
+          <a class=""><i class="icon-trash"></i>Remove</a>
+          <a class=""><i class="icon-ok"></i>Upload</a> 
+        </div>
+        <h1> <i class="icon-dashboard"></i>Overview <span class="icon-stack"><i class="icon-circle icon-stack-base"></i><i class="icon-question icon-light"></i></span> </h1>
+    <!-- Alerts and messages -->
+        <div class="row">
+          <div class="col-md-6" id="tasks-pane">
+            <form method="post" name="rhn_list" action="/YourRhn.do">
+              <table class="spacewalk-table">
+                <thead>
+                  <tr>
+                    <th>Tasks</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Manage Entitlements and Subscriptions</strong>: <br>
+                         <a href="/rhn/systems/SystemEntitlements.do"> My Organization</a> <strong>|</strong> <a href="/rhn/admin/multiorg/SoftwareEntitlements.do">Spacewalk-Wide </a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="/rhn/activationkeys/List.do"> Manage <strong>Activation Keys</strong> </a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="/rhn/kickstart/KickstartOverview.do"> Manage <strong>Kickstarts</strong> </a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="/rhn/configuration/file/GlobalConfigFileList.do"> Manage <strong>Configuration Files</strong> </a></td>
+                  </tr>
+                  <tr>
+                      <td><a href="/rhn/monitoring/ProbeList.do"> <strong>Monitor</strong> Systems </a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="/rhn/admin/multiorg/Organizations.do"> Manage <strong>Spacewalk Organizations</strong> </a></td>
+                  </tr>
+                  <tr>
+                    <td><a href="/rhn/admin/config/GeneralConfig.do"> <strong>Configure</strong> Spacewalk </a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </form>
+          </div>
+          <div class="col-md-6" id="inactive-systems-pane">
+            <div class="">
+              <form method="post" name="rhn_list" action="/YourRhn.do">
+                <table cellspacing="0" cellpadding="0" class="half-table">
+                  <thead>
+                    <tr>
+                      <th>Inactive Systems</th>
+                      <th> </th>
+                    </tr>
+              </thead>
+                  <tbody>
+                <tr>
+                      <td class="first-column"><a href="/rhn/systems/details/Overview.do?sid=1000010002"> <img src="/img/icon_checkin.gif" alt="Unknown"> f222.suse.de </a></td>
+                      <td class="last-column"> 1 Week(s) </td>
+                    </tr>
+                <tr class="list-row-even">
+                      <td class="first-column"><a href="/rhn/systems/details/Overview.do?sid=1000010003"> <img src="/img/icon_checkin.gif" alt="Unknown"> rabbit.suse.de </a></td>
+                      <td class="last-column"> 3 Week(s) </td>
+                    </tr>
+                <tr>
+                      <td style="text-align: center;" class="first-column last-column" colspan="2"><a href="/rhn/systems/Inactive.do"> View All Inactive Systems (2) </a></td>
+                    </tr>
+              </tbody>
+                </table>
+          </form>
+            </div>
+      </div>
+        </div>
+    <div style="clear: both; padding-top: 10px;">
+          <div id="critical-systems-pane">
+        <form method="POST" id="listset_3834378883" name="name_3834378883" action="/rhn/dwr/call/plaincall/CriticalSystemsRenderer.renderAsync.dwr">
+              <input type="hidden" name="csrf_token" value="7112926041897076897">
+              <!-- List id 3486660645 -->
+              <input type="hidden" name="list_3486660645_search_parent" value="true">
+              <input type="hidden" name="list_3486660645_search_child" value="false">
+              <input type="hidden" name="list_3486660645_parent_is_an_element" value="true">
+              <div class="filter-input">
+            <table cellspacing="0" cellpadding="0" width="100%">
+                  <tbody>
+                <tr>
+                      <td valign="middle" class="list-infotext">&nbsp;&nbsp;</td>
+                    </tr>
+              </tbody>
+                </table>
+          </div>
+              <table class="table table-stripped" id="most-critical-systems">
+            <thead>
+                  <tr>
+                <th colspan="6"><strong>Most Critical Systems</strong></th>
+              </tr>
+                  <tr>
+                <th class="row-2 ">System Name</th>
+                <th class="row-2 ">All Updates</th>
+                <th class="row-2 thin-column ">Health</th>
+                <th class="row-2 text-align: center; ">Security Errata</th>
+                <th class="row-2 text-align: center; ">Bugfix Errata</th>
+                <th class="row-2 text-align: center; ">Enhancement Errata</th>
+              </tr>
+                </thead>
+            <tbody>
+                  <tr id="row_3486660645_1000010003">
+                <td><a href="/rhn/systems/details/Overview.do?sid=1000010003"> rabbit.suse.de</a></td>
+                <td> 3 </td>
+                <td class="center "><a href="/rhn/systems/details/probes/ProbesList.do?sid=1000010003"> <img src="/img/rhn-mon-pending.gif" alt="Pending probes" title="Pending probes"> </a></td>
+                <td><img src="/img/wrh-security.gif" alt="Security">1 </td>
+                <td><img src="/img/wrh-bug.gif" alt="Bug Fix">1 </td>
+                <td><img src="/img/rhn-icon-enhancement.gif" alt="Enhancement">1 </td>
+              </tr>
+                </tbody>
+          </table>
+              <!-- END 3486660645 --> 
+              
+              <span class="full-width-note-left"> <strong>1</strong> - <strong>1</strong> of <strong>1</strong> most critical systems displayed </span> <span class="full-width-note-right"> <a href="/rhn/systems/OutOfDate.do"> View All Critical Systems </a> </span>
+            </form>
+      </div>
+          <div id="critical-probes-pane">
+        <div class="full-width-wrapper" style="clear: both;" id="critical-probes-pane">
+              <form method="POST" id="listset_1465372272" name="name_1465372272" action="/rhn/dwr/call/plaincall/CriticalProbesRenderer.renderAsync.dwr">
+            <input type="hidden" name="csrf_token" value="7112926041897076897">
+            <!-- List id 1860732250 -->
+            <input type="hidden" name="list_1860732250_search_parent" value="true">
+            <input type="hidden" name="list_1860732250_search_child" value="false">
+            <input type="hidden" name="list_1860732250_parent_is_an_element" value="true">
+            <div class="filter-input">
+                  <table cellspacing="0" cellpadding="0" width="100%">
+                <tbody>
+                      <tr>
+                    <td valign="middle" class="list-infotext">&nbsp;&nbsp;</td>
+                  </tr>
+                    </tbody>
+              </table>
+                </div>
+            <table class="table table-stripped" id="list_1860732250style_id">
+                  <thead>
+                <tr>
+                      <th>Critical Probes</th>
+                      <th>System(s)</th>
+                    </tr>
+              </thead>
+                  <tbody>
+                <tr>
+                      <td colspan="2"><div class="list-empty-message"><strong>No critical probes.</strong>
+                          <p>None of the probes assigned to your systems are in a critical state. You can view a list of all the probes in your system at <strong><a href="/rhn/monitoring/ProbeList.do">All &gt; Probes</a></strong></p>
+                          <br>
+                        </div></td>
+                    </tr>
+              </tbody>
+                </table>
+            <!-- END 1860732250 -->
+          </form>
+            </div>
+      </div>
+          <div id="warning-probes-pane">
+        <div class="full-width-wrapper" style="clear: both;" id="warning-probes-pane">
+              <form method="POST" id="listset_3811754813" name="name_3811754813" action="/rhn/dwr/call/plaincall/WarningProbesRenderer.renderAsync.dwr">
+            <input type="hidden" name="csrf_token" value="7112926041897076897">
+            <!-- List id 534300914 -->
+            <input type="hidden" name="list_534300914_search_parent" value="true">
+            <input type="hidden" name="list_534300914_search_child" value="false">
+            <input type="hidden" name="list_534300914_parent_is_an_element" value="true">
+            <div class="filter-input">
+                  <table cellspacing="0" cellpadding="0" width="100%">
+                <tbody>
+                      <tr>
+                    <td valign="middle" class="list-infotext">&nbsp;&nbsp;</td>
+                  </tr>
+                    </tbody>
+              </table>
+                </div>
+            <table class="table table-stripped" id="list_534300914style_id">
+                  <thead>
+                <tr>
+                      <th>Warning Probes</th>
+                      <th>System(s)</th>
+                    </tr>
+              </thead>
+                  <tbody>
+                <tr>
+                      <td colspan="2"><div class="list-empty-message"><strong>No warning probes.</strong>
+                          <p>None of the probes assigned to your systems are in a warning state. You can view a list of all the probes in your system at <strong><a href="/rhn/monitoring/ProbeList.do">All &gt; Probes</a></strong></p>
+                          <br>
+                        </div></td>
+                    </tr>
+              </tbody>
+                </table>
+            <!-- END 534300914 -->
+          </form>
+            </div>
+      </div>
+          <div style="clear: both;">
+        <div id="pending-actions-pane" class="full-width-wrapper">
+              <form method="post" name="rhn_list" action="/YourRhn.do">
+            <div style="clear:both; padding-top: 30px;">
+                  <table width="100%" cellspacing="0" cellpadding="0" class="list">
+                <thead>
+                      <tr>
+                    <th style="text-align:left;">Recently Scheduled Actions</th>
+                  </tr>
+                      <tr>
+                    <td style="padding-bottom: 24px;" class="first-column last-column"><strong>No recently scheduled actions.</strong>
+                          <p>You have scheduled no actions within the past thirty days. You may view a list of past completed actions at <strong><a href="/rhn/schedule/CompletedActions.do"> Schedule &gt; Completed Actions</a></strong> and a list of past failed actions at <strong><a href="/rhn/schedule/FailedActions.do"> Schedule &gt; Failed Actions</a></strong>. </p></td>
+                  </tr>
+                    </thead>
+              </table>
+                </div>
+          </form>
+            </div>
+        <div id="latest-errata-pane" class="full-width-wrapper">
+              <form method="post" name="rhn_list" action="/YourRhn.do">
+            <table width="100%" cellspacing="0" cellpadding="0" class="list">
+                  <thead>
+                <tr>
+                      <th>Relevant Security Errata</th>
+                      <th> </th>
+                      <th>Systems</th>
+                      <th>Updated</th>
+                    </tr>
+              </thead>
+                  <tbody>
+                <tr>
+                      <td class="first-column"><img src="/img/wrh-security.gif" alt="Security"> <a href="/rhn/errata/details/Details.do?eid=12">Security Fix for GDB</a></td>
+                      <td> Security Fix for GDB </td>
+                      <td style="text-align: center;"><a href="/rhn/errata/details/SystemsAffected.do?eid=12"> 1 </a></td>
+                      <td style="text-align: center;" class="last-column"> 8/20/13 </td>
+                    </tr>
+              </tbody>
+                </table>
+            <span class="full-width-note-left"> <strong>1</strong> - <strong>1</strong> of <strong>1</strong> relevant errata  displayed</span> <span class="full-width-note-right"> <a href="/rhn/errata/AllErrata.do"> View All Errata </a> | <a href="/rhn/errata/RelevantErrata.do"> View All Relevant Errata </a> </span>
+          </form>
+            </div>
+        <div id="systems-groups-pane" class="full-width-wrapper">
+              <form method="POST" id="listset_1928654210" name="name_1928654210" action="/rhn/dwr/call/plaincall/SystemGroupsRenderer.renderAsync.dwr">
+            <input type="hidden" name="csrf_token" value="7112926041897076897">
+            <!-- List id 4266446821 -->
+            <input type="hidden" name="list_4266446821_search_parent" value="true">
+            <input type="hidden" name="list_4266446821_search_child" value="false">
+            <input type="hidden" name="list_4266446821_parent_is_an_element" value="true">
+            <div class="filter-input">
+                  <table cellspacing="0" cellpadding="0" width="100%">
+                <tbody>
+                      <tr>
+                    <td valign="middle" class="list-infotext">&nbsp;&nbsp;</td>
+                  </tr>
+                    </tbody>
+              </table>
+                </div>
+            <table class="table table-stripped" id="list_4266446821style_id" width="100%">
+                  <thead>
+                <tr>
+                      <th colspan="4"><strong>System Group Name</strong></th>
+                    </tr>
+                <tr>
+                      <th>Updates</th>
+                      <th class="thin-column ">Health</th>
+                      <th>System Group Name</th>
+                      <th>Systems</th>
+                    </tr>
+              </thead>
+                  <tbody>
+                <tr>
+                      <td colspan="4"><div class="list-empty-message">None<br>
+                        </div></td>
+                    </tr>
+              </tbody>
+                </table>
+            <!-- END 4266446821 --> 
+            
+            <span class="full-width-note-right"> <a href="/rhn/systems/SystemGroupList.do"> View All System Groups </a> </span>
+          </form>
+            </div>
+        <div id="recently-registered-pane" class="full-width-wrapper">
+              <form method="POST" id="listset_3860819090" name="name_3860819090" action="/rhn/dwr/call/plaincall/RecentSystemsRenderer.renderAsync.dwr">
+            <input type="hidden" name="csrf_token" value="7112926041897076897">
+            <!-- Start of active users list --> 
+            <!-- List id 4043777749 -->
+            <input type="hidden" name="list_4043777749_search_parent" value="true">
+            <input type="hidden" name="list_4043777749_search_child" value="false">
+            <input type="hidden" name="list_4043777749_parent_is_an_element" value="true">
+            <div class="filter-input">
+                  <table cellspacing="0" cellpadding="0" width="100%">
+                <tbody>
+                      <tr>
+                    <td valign="middle" class="list-infotext">&nbsp;&nbsp;</td>
+                  </tr>
+                    </tbody>
+              </table>
+                </div>
+            <table class="table table-stripped" id="list_4043777749style_id" width="100%">
+                  <thead>
+                <tr>
+                      <th colspan="6"><strong><strong>Recently Registered Systems</strong></strong></th>
+                    </tr>
+                <tr>
+                      <th>Updates</th>
+                      <th>System</th>
+                      <th>Base Channel</th>
+                      <th>Date Registered</th>
+                      <th>Registered by</th>
+                      <th>Entitlement</th>
+                    </tr>
+              </thead>
+                  <tbody>
+                <tr>
+                      <td colspan="6"><div class="list-empty-message"><strong>No recently registered systems.</strong>
+                          <p>You have no systems that were registered within the past 30 days. You may view a list of all registered systems at <a href="/rhn/systems/Registered.do"><strong>Systems &gt; Recently Registered</strong></a>.</p>
+                          <br>
+                        </div></td>
+                    </tr>
+              </tbody>
+                </table>
+            <!-- END 4043777749 --> 
+            <span class="full-width-note-left"> <strong>0</strong> - <strong>0</strong> of <strong>0</strong> recently registered systems displayed </span> <span class="full-width-note-right"> <a href="/rhn/systems/Registered.do"> View All Recently Registered Systems </a> </span>
+          </form>
+            </div>
+      </div>
+        </div>
+  </section>
+    </div>
+  <footer class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 text-center">
+    <p>Copyright Notice - Spacewalk theme Bootstrap 1.0</p>
+    </div>
+    <div class="col-md-2 text-right">
+      <img src="img/logo_vendor.png" />
+    </div>
+  </footer>
+</body>
+</html>
