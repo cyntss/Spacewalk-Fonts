@@ -1,65 +1,23 @@
 /* Original Bootstrap */
-@import  url(bootstrap/less/bootstrap.less);
-/*spacewalk css theme*/
+@import url(bootstrap/less/bootstrap.less);
+
+/* Here begins the spacewalk css theme */
+
+/* Import of Roboto font */
 @import url(http://fonts.googleapis.com/css?family=Roboto:300,700);
-
-/* Bootstrap color variables overwrited */
-@gray-darker:            lighten(#000, 13.5%); // #222
-@gray-dark:              lighten(#000, 25%);   // #333
-@gray:                   lighten(#000, 50%); // #555
-@gray-light:             lighten(#000, 80%);   // #999
-@gray-lighter:           lighten(#000, 95%); // #eee
-
-@spacewalk-blue:	 #00aad4;
-
-/* aside menu colors */
-@spacewalk-list-menu:    @gray-lighter;
-@spacewalk-list-menu-active:    lighten(@spacewalk-list-menu, 4%);
-@spacewalk-list-menu-hover: lighten(@spacewalk-list-menu, 2%);
-@spacewalk-list-first-submenu:    darken(@spacewalk-list-menu, 8%);
-@spacewalk-list-first-submenu-active:    lighten(@spacewalk-list-first-submenu, 6%);
-@spacewalk-list-first-submenu-hover:    lighten(@spacewalk-list-first-submenu, 2%);//#f3f3f3
-@spacewalk-list-second-submenu:    darken(@spacewalk-list-first-submenu, 5%);
-@spacewalk-list-second-submenu-active:    lighten(@spacewalk-list-second-submenu, 6%);
-@spacewalk-list-second-submenu-hover:    lighten(@spacewalk-list-second-submenu, 2%);
-
-/* Roboto variable: font variable to be applied in different text elements*/
-@roboto-font: 'Roboto', sans-serif;
-
-.Roboto-thin{
-	font-family: @roboto-font;
-	font-weight: 300;
-}
-.Roboto-strong{
-	font-family: @roboto-font;
-	font-weight: 700;
-}
-
-/* glow and shadow for text */
-.glow-text{
-	text-shadow: 1px 1px 1px #fff;
-}
-.glow-text-deleted{
-	text-shadow: 0 transparent;
-}
-.shadow-text{
-	text-shadow: 1px 1px 1px #333;
-}
-
-/* titles */
-h1, h2, h3, h4 {
-	.Roboto-thin
-}
-h1{
-	font-size: 2em
-}
-h2{
-	font-size: 1.7em;
-}
+/* Spacewalk variables */
+@import url(variables.less);
+/* Spacewalk mixins */
+@import url(mixins.less);
+/*Import of Tables style*/
+@import url(tables.less);
 
 /* Main HTML5 tags defined for the theme */
 body{
 	background: #f7f7f7;
+}
+html, body{
+	height: 100%
 }
 header{
 	width: 100%;
@@ -88,10 +46,43 @@ section{
 	margin-bottom:-9999px;
 	padding-bottom: 9999px 
 }
+/* titles */
+h1, h2, h3, h4 {
+	.Roboto-thin
+}
+h1{
+	font-size: 2em
+}
+h2{
+	font-size: 1.7em;
+}
+/* glow and shadow for text */
+.glow-text{
+	text-shadow: 1px 1px 1px #fff;
+}
+.glow-text-deleted{
+	text-shadow: 0 transparent;
+}
+.shadow-text{
+	text-shadow: 1px 1px 1px #333;
+}
 /* for the body div to make both columns the same size*/
 .row.body-container{
 	overflow: hidden;
-	min-height: 100%
+	min-height: 100%;
+}
+/* style for the login page */
+.wrap{
+	overflow: hidden;
+	min-height: 100%;
+	margin:0 auto -60px auto;
+}
+.login-page{
+	width: 70%;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	overflow: hidden;
 }
 /* adding margin to the icons in fontawesome */
 [class^="icon-"],
@@ -105,8 +96,12 @@ section{
 header .row{
 	margin: 0 1em 
 }
+header .row [class*="col-md"]{
+	padding-right: 0;
+	padding-left: 0
+}
 header .logo{
-	padding:1.2em 0 0 0;
+	padding-top: 1.4em;
 }
 header form{
 	margin: .9em 0 1em 0
@@ -136,9 +131,6 @@ header ul.nav-pills:nth-child(3){
 	background: #666;
 }
 header ul.nav-pills:nth-child(2) li{
-	border-left: 1px #000 solid
-}
-header ul.nav-pills:nth-child(2) li{
 	border-left: 1px #222 solid
 }
 header ul.nav-pills:nth-child(3) li{
@@ -148,16 +140,21 @@ header ul.nav-pills li:first-child {
 	border-left: 0
 }
 header .navbar-nav > li > a{
-	padding: .5em 2em;
+	padding: .5em 1.2em;
+
 }
 header .navbar-nav > li:hover{
 	background: @spacewalk-blue;
+	border-radius: 4px 4px 0 0
 }
 header form input[type="search"]{
 	padding: 0px 10px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+}
+header .btn.btn-info.input-sm{
+	padding-top: 4px
 }
 
 /* fixing margin issue in Bootstrap 3 */
@@ -197,19 +194,13 @@ header .navbar{
 	min-height: .5em;
 }
 
-/* Systems selector inside the search form in the header */
-section #bar{
-	width: 100%;
-	height: 2.5em
+/* Systems selector inside the main menu in the header */
+header #bar{
+	color: #fff;
 }
-section #bar .spacewalk-bar{
+header #bar .spacewalk-bar{
 	padding: .5em 1.2em;
-	right: 0;
-	top: 1em;
-	background: #fff;
-	border:1px solid #ccc;
 	text-align: right;
-	border-radius: 0 0 4px 4px
 }
 
 /* systems selector */
@@ -303,6 +294,9 @@ aside ul > ul li{
 	list-style: none;
 	padding: 0
 }
+aside .nav > li > a{
+	padding: .4em 1em
+}
 
 /* TABLES */
 .table > thead > tr.active > th{
@@ -358,16 +352,21 @@ aside .sideleg ul{
 
 /* question symbol for help pop up*/
 h1 .icon-stack .icon-question{
-	font-size: .5em;
+	font-size: .6em;
+}
+h1 .icon-stack{
+	width: 1em;
+	height: 1em;
+	line-height: .7em;
 }
 .icon-stack .icon-stack-base.icon-circle{
-	font-size: .8em;
+	font-size: .7em;
 	color: @spacewalk-blue;
 }
 
 /* spacewalk toolbar */
 .spacewalk-toolbar{
-	padding: 1em
+	padding: .5em 1em
 }
 .spacewalk-toolbar>a{
 	border-right:1px solid @gray-light;
@@ -398,4 +397,3 @@ h1 .icon-stack .icon-question{
 .spacewalk-content-nav .nav.nav-tabs li.active a{
 	background: #dddddd;
 }
-
