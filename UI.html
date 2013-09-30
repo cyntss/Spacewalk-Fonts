@@ -11,6 +11,11 @@
 	<script src="/js/jquery.js"></script>
 	<script src="/js/html5shiv.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(document).on("ready",function(){
+			$(".table-rounded").wrap("<div class='table-responsive'>");
+		});
+	</script>
 	<link rel="stylesheet" href="/css/normalize.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Spacewalk</title>
@@ -29,13 +34,15 @@
 		<hr>
 		<a href="#">This is a link</a>
 		<hr />
-		<h2>Tables: using class:spacewalk-table table-striped</h2>
-		<table class="spacewalk-table table-striped">
-		  <thead class="shadowText">
+		<h2>Tables: using <strong>clas="table-rounded"</strong></h2>
+		<table class="table table-rounded">
+		  <thead>
 		    <tr>
-		      <th scope="col" abbr="Date">Fecha</th>
-		      <th scope="col" abbr="Description">Movimiento</th>
-		      <th scope="col" abbr="Ammount">Importe</th>
+		      <th>Fecha</th>
+		      <th>Movimiento</th>
+		      <th>Movimiento</th>
+		      <th>Movimiento</th>
+		      <th>Importe</th>
 		    </tr>
 		  </thead>
 		  <tbody>
@@ -44,12 +51,8 @@
 		        <p>06/12/2012 20:22:01</p>
 		      </td>
 		      <td>
-		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong><br>
-		        Descripcion del movimiento (si es necesario)
+		        <p>06/12/2012 20:22:01</p>
 		      </td>
-		      <td><p>$10</p></td>
-		    </tr>
-		    <tr>
 		      <td>
 		        <p>06/12/2012 20:22:01</p>
 		      </td>
@@ -60,6 +63,28 @@
 		      <td><p>$10</p></td>
 		    </tr>
 		    <tr>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong><br>
+		        Descripcion del movimiento (si es necesario)
+		      </td>
+		      <td><p>$10</p></td>
+		    </tr>
+		    <tr>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
 		      <td>
 		        <p>06/12/2012 20:22:01</p>
 		      </td>
@@ -71,20 +96,20 @@
 		    </tr>
 		  </tbody>
 		</table>
-		<h1>table responsive</H1>
-		<table class="spacewalk-table">
-		  <thead class="shadowText">
+		<h1>Table with <strong>class="table-rounded" </strong> and contextual classes from Bootstrap inside the &lt;tr&gt;</H1>
+		<table class="table table-hover table-rounded">
+		  <thead>
 		    <tr>
-		      <th scope="col" abbr="Date">Fecha</th>
-		      <th scope="col" abbr="Date">Fecha</th>
-		      <th scope="col" abbr="Date">Fecha</th>
-		      <th scope="col" abbr="Date">Fecha</th>
-		      <th scope="col" abbr="Description">Movimiento</th>
-		      <th scope="col" abbr="Ammount">Importe</th>
+		      <th>Fecha</th>
+		      <th>Fecha</th>
+		      <th>Fecha</th>
+		      <th>Fecha</th>
+		      <th>Movimiento</th>
+		      <th>Importe</th>
 		    </tr>
 		  </thead>
 		  <tbody>
-		    <tr>
+		    <tr class="warning">
 		      <td>
 		        <p>06/12/2012 20:22:01</p>
 		      </td>
@@ -102,7 +127,25 @@
 		      </td>
 		      <td><p>$10</p></td>
 		    </tr>
-		    <tr>
+		    <tr class="danger">
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong>
+		      </td>
+		      <td><p>$10</p></td>
+		    </tr>
+		    <tr class="success">
 		      <td>
 		        <p>06/12/2012 20:22:01</p>
 		      </td>
@@ -142,13 +185,15 @@
 		</table>
 
 		<hr />
-		<h2>Tables: XS size - Class: spacewalk-table-xs</h2>
-		<table class="spacewalk-table spacewalk-table-xs">
+		<h2>Tables: class="table table-rounded table-condensed"</h2>
+		<table class="table table-rounded table-condensed">
 		  <thead>
 		    <tr>
-		      <th scope="col" abbr="Date">Fecha</th>
-		      <th scope="col" abbr="Description">Movimiento</th>
-		      <th scope="col" abbr="Ammount">Importe</th>
+		      <th>Fecha</th>
+		      <th>Movimiento</th>
+		      <th>Movimiento</th>
+		      <th>Movimiento</th>
+		      <th>Importe</th>
 		    </tr>
 		  </thead>
 		  <tbody>
@@ -157,12 +202,8 @@
 		        <p>06/12/2012 20:22:01</p>
 		      </td>
 		      <td>
-		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong><br>
-		        Descripcion del movimiento (si es necesario)
+		        <p>06/12/2012 20:22:01</p>
 		      </td>
-		      <td><p>$10</p></td>
-		    </tr>
-		    <tr>
 		      <td>
 		        <p>06/12/2012 20:22:01</p>
 		      </td>
@@ -173,6 +214,28 @@
 		      <td><p>$10</p></td>
 		    </tr>
 		    <tr>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong><br>
+		        Descripcion del movimiento (si es necesario)
+		      </td>
+		      <td><p>$10</p></td>
+		    </tr>
+		    <tr>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
 		      <td>
 		        <p>06/12/2012 20:22:01</p>
 		      </td>
@@ -185,12 +248,14 @@
 		  </tbody>
 		</table>
 		<hr>
-		<table class="spacewalk-table spacewalk-table-xs">
+		<table class="table table-rounded table-condensed">
 		  <thead class="shadowText">
 		    <tr>
-		      <th scope="col" abbr="Date">Fecha</th>
-		      <th scope="col" abbr="Description">Movimiento</th>
-		      <th scope="col" abbr="Ammount">Importe</th>
+		      <th>Fecha</th>
+		      <th>Movimiento</th>
+		      <th>Movimiento</th>
+		      <th>Movimiento</th>
+		      <th>Importe</th>
 		    </tr>
 		  </thead>
 		  <tbody>
@@ -201,11 +266,8 @@
 		      <td>
 		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong>
 		      </td>
-		      <td><p>$10</p></td>
-		    </tr>
-		    <tr>
 		      <td>
-		        <p>06/12/2012 20:22:01</p>
+		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong>
 		      </td>
 		      <td>
 		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong>
@@ -215,6 +277,27 @@
 		    <tr>
 		      <td>
 		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong>
+		      </td>
+		      <td>
+		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong>
+		      </td>
+		      <td>
+		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong>
+		      </td>
+		      <td><p>$10</p></td>
+		    </tr>
+		    <tr>
+		      <td>
+		        <p>06/12/2012 20:22:01</p>
+		      </td>
+		      <td>
+		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong>
+		      </td>
+		      <td>
+		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong>
 		      </td>
 		      <td>
 		      	<strong>Consumo en terminal: Renault (pasillo PB)</strong>
@@ -224,7 +307,7 @@
 		  </tbody>
 		</table>
 		<hr>
-		<table class="spacewalk-table">
+		<table class="table-rounded">
 			<thead>
 				<tr>
 					<th>one column</th>
@@ -233,7 +316,7 @@
 			<tbody>
 				<tr>
 					<td>
-						One register
+						Let me tell you something my friend. hope is a dangerous thing. hope can drive a man insane. bruce... i'm god. circumstances have taught me that a man's ethics are the only possessions he will take beyond the grave. no, this is mount everest. you should flip on the discovery channel from time to time. but i guess you can't now, being dead and all. i now issue a new commandment: thou shalt do the dance. i don't think they tried to market it to the billionaire, spelunking, base-jumping crowd. i once heard a
 					</td>
 				</tr>
 			</tbody>
@@ -263,6 +346,53 @@
 		</table>
 		<hr>
 		<h2>Table with Bootstrap styles</h2>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>column1</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>text text text</td>
+				</tr>
+				<tr>
+					<td>text text text</td>
+				</tr>
+				<tr class="success">
+					<td>text text text</td>
+				</tr>
+			</tbody>
+			<tr>
+			</tr>
+		</table>
+		<hr>
+		<table class="table table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th>title</th>
+					<th>title</th>
+					<th>title</th>
+				</tr>				
+			</thead>
+			<tbody>
+				<tr class="success">
+					<td>text</td>
+					<td>text</td>
+					<td>text</td>
+				</tr>
+				<tr class="warning">
+					<td>text</td>
+					<td>text</td>
+					<td>text</td>
+				</tr>
+				<tr class="danger">
+					<td>text</td>
+					<td>text</td>
+					<td>text</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 	<br />
 	<footer>
