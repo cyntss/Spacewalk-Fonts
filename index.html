@@ -13,26 +13,7 @@
 	<script src="/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="/css/normalize.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script type="text/javascript">
-		$(document).on("ready", function(){
-			$("#sidenav ul>ul").hide();
-			$("#sidenav li").attr('href', '#').on("click", function(){
-				$(this).next("ul").slideToggle();
-				$(this).toggleClass('active');
-				$(this).next("a").toggleClass('active');
-			});
-			$("#clearbtn").click(hidesystemtool);
-			function hidesystemtool(){
-				$("#bar").animate({
-					"top": "-=50px",
-					"opacity": "0"},
-					300, function() {
-					/* stuff to do after animation is complete */
-					$(this).hide();
-				});
-			}
-		});
-	</script>
+	<script src="js/spacewalk-essentials.js"></script>
 	<title>Spacewalk</title>
 </head>
 <body>
@@ -54,7 +35,7 @@
 					<li><a href="#"><i class="icon-user"></i>: admin </a></li>
 					<li><a href="#"><i class="icon-sitemap"></i>: Spacewalk Default Organization </a></li>
 					<li><a href="#"><i class="icon-cogs"></i></a></li>
-					<li><a href="#"><i class="icon-signout"></i></a></li>
+					<li><a href="login.html"><i class="icon-signout"></i></a></li>
 				</ul>
 				<form class="form-inline hidden-xs" role="form">
 					<div class="form-group">
