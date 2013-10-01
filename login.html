@@ -14,17 +14,7 @@
 	<link rel="stylesheet" href="/css/normalize.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="js/spacewalk-essentials.js"></script>
-	<script>
-	$(document).on("ready", function(){
-		$("aside").remove();
-		$(document).ready(function() {
-		    var me = $("section");
-		    var newMe = $("<div class='login-page'>");
-		    newMe.html(me.html());
-		    me.replaceWith(newMe);
-		});
-	});
-	</script>
+	<script src="js/spacewalk-login.js"></script>
 	<title>Spacewalk</title>
 </head>
 <body>
@@ -113,11 +103,11 @@
 		</div>
 	</div>
 	<footer class="row">
-		<div class="col-md-2"></div>
-		<div class="col-md-8 text-center">
+		<div class="col-xs-2"></div>
+		<div class="col-xs-8 text-center">
 			<p>Copyright Notice - Spacewalk theme Bootstrap 1.0</p>
 		</div>
-		<div class="col-md-2 text-right"><img src="img/logo_vendor.png" /></div>
+		<div class="col-xs-2 text-right"><img src="img/logo_vendor.png" /></div>
 	</footer>
 </body>
 </html>
