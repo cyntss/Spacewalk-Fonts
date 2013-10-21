@@ -1,246 +1,358 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-	<link rel="stylesheet" href="/fonts/font-awesome/css/font-awesome.css">
-	<link rel="stylesheet" href="/fonts/font-spacewalk/css/spacewalk-font.css">
-	<link rel="stylesheet/less" href="/css/spacewalk.less">
-	<!--[if IE 7]>
- 		<link rel="stylesheet" href="/font-awesome/css/font-awesome-ie7.min.css">
-	<![endif]-->
-	<script src="/js/less.js"></script>
-	<script src="/js/jquery.js"></script>
-	<script src="/js/html5shiv.js"></script>
-	<script src="/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="/css/normalize.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="js/spacewalk-essentials.js"></script>
-	<title>Spacewalk</title>
+<title>Your Font/Glyphs</title>
+<link rel="stylesheet" href="style.css" />
+<!--[if lte IE 7]><script src="lte-ie7.js"></script><![endif]-->
+<style>
+	section, header, footer {display: block;}
+	body {
+		font-family: sans-serif;
+		color: #444;
+		line-height: 1.5;
+		font-size: 1em;
+	}
+	* {
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+	.glyph {
+		font-size: 16px;
+		float: left;
+		text-align: center;
+		background: #eee;
+		padding: .75em;
+		margin: .75em 1.5em .75em 0;
+		width: 7.5em;
+		border-radius: .25em;
+		box-shadow: inset 0 0 0 1px #f8f8f8, 0 0 0 1px #CCC;
+	}
+	.glyph input {
+		font-family: consolas, monospace;
+		font-size: 13px;
+		width: 100%;
+		text-align: center;
+		border: 0;
+		box-shadow: 0 0 0 1px #ccc;
+		padding: .125em;
+	}
+	.w-main {
+		width: 80%;
+	}
+	.centered {
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.fs1 {
+		font-size: 2em;
+	}
+	header {
+		margin: 2em 0;
+		padding-bottom: .5em;
+		color: #666;
+		box-shadow: 0 2px #eee;
+	}
+	header h1 {
+		font-size: 2em;
+		font-weight: normal;
+	}
+	.clearfix:before, .clearfix:after { content: ""; display: table; }
+	.clearfix:after, .clear { clear: both; }
+	footer {
+		margin-top: 2em;
+		padding: .5em 0;
+		box-shadow: 0 -2px #eee;
+	}
+	a, a:visited {
+		color: #B35047;
+		text-decoration: none;
+	}
+	a:hover, a:focus {color: #000;}
+	.box1 {
+		font-size: 16px;
+		display: inline-block;
+		width: 15em;
+		padding: .25em .5em;
+		background: #eee;
+		margin: .5em 1em .5em 0;
+	}
+</style>
 </head>
 <body>
-	<div class="wrap">
-		<header>
-			<div class="row">
-				<div class="col-md-3 logo">
-					<img src="img/logo_vendor.png" />
-					<img src="img/logo_product.png" />
-				</div>
-				<div class="col-md-9 text-right">
-					<ul class="nav nav-pills">
-						<li><a href="#">English (change)</a></li>
-					</ul>
-					<ul class="nav nav-pills">
-						<li><a href="#">Knowledgebase </a></li>
-						<li><a href="#">Documentation</a></li>
-					</ul>
-					<ul class="nav nav-pills">
-						<li><a href="#"><i class="icon-user"></i>: admin </a></li>
-						<li><a href="#"><i class="icon-sitemap"></i>: Spacewalk Default Organization </a></li>
-						<li><a href="#"><i class="icon-cogs"></i></a></li>
-						<li><a href="login.html"><i class="icon-signout"></i></a></li>
-					</ul>
-					<form class="form-inline hidden-xs" role="form">
-						<div class="form-group">
-							<select name="search_type" class="form-control input-sm">
-								<option value="systems">Systems</option>
-								<option value="packages">Packages</option>
-								<option value="errata">Errata</option>
-								<option value="docs">Documentation</option>
-						    </select>
-						</div>
-						<div class="form-group">
-							<label class="sr-only" for="exampleInputEmail2">Search</label>
-							<input type="search" class="form-control input-sm" id="Search" placeholder="Search">
-						</div>
-						<div class="form-group">
-							<button type="submit" class="btn btn-info input-sm"><i class="icon-search"></i>Search</button>
-						</div>
-					</form>
-				</div>
-			</div>
-			<nav role="navigation" class="navbar navbar-inverse spacewalk-main-nav">
-				<ul class="nav navbar-nav">
-					<li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
-				</ul>
-				<div id="bar">
-					<div class="spacewalk-bar pull-right">
-				        <span id="header_selcount">
-				           <span class="badge">20 </span> systems selected
-				        </span>
-				        <a class="button" href="#">
-				        Manage
-				        </a>
-				        <a class="button" id="clearbtn" href="#">
-				        Clear
-				        </a>
-				    </div>
-				</div>
-			</nav>
-		</header>
-		<div class="row body-container">
-			<aside class="col-md-2">
-				<nav id="sidenav">
-					<ul class="nav nav-pills nav-stacked">
-					  <li class="active"><i class=""></i><a href="#">Overview</a></li>
-					  <li><a href="#">Your account</a></li>
-					  <ul class="nav nav-pills nav-stacked">
-					  	<li><a href="#">Your preferences</a></li>
-					  	<ul class="nav nav-pills nav-stacked">
-						  	<li><a href="#">Your preferences</a></li>
-						  	<li><a href="#">Your preferences</a></li>
-						  	<li><a href="#">Your preferences</a></li>
-					    </ul>
-					  	<li><a href="#">Your preferences</a></li>
-					  	<li><a href="#">Your preferences</a></li>
-					  </ul>
-					  <li><a href="#">Your preferences</a></li>
-					  <ul class="nav nav-pills nav-stacked">
-					  	<li class="active"><a href="#">Your preferences</a></li>
-					  	<ul class="nav nav-pills nav-stacked">
-						  	<li class="active"><a href="#">Your preferences</a></li>
-						  	<li><a href="#">Your preferences</a></li>
-						  	<li><a href="#">Your preferences</a></li>
-					    </ul>
-					  	<li><a href="#">Your preferences</a></li>
-					  	<li><a href="#">Your preferences</a></li>
-					  </ul>
-					  <li><a href="#">Locale preferences</a></li>
-					  <li><a href="#">Subscriptions management</a></li>
-					  <li><a href="#">Organization trust</a></li>
-					</ul>
-				</nav>
-				<div class="sideleg">
-					<h4>Overview Legend</h4>
-					<ul>
-						<li><i class="icon-ok-sign"></i>OK</li>
-						<li><i class="icon-exclamation-sign"></i>Critical</li>
-						<li><i class="icon-warning-sign"></i>Warning</li>
-						<li><i class="spacewalk-icon-unknown-system"></i>Unknown</li>
-						<li><i class="spacewalk-icon-locked-system"></i>Locked</li>
-						<li><i class="spacewalk-icon-autoinstalling"></i>Kickstarting</li>
-						<li><i class="icon-flag"></i>Pending Actions</li>
-						<li><i class="icon-remove-circle"></i>Failed Actions</li>
-						<li><i class="icon-ok-circle"></i>Completed Actions</li>
-						<li><i class="icon-shield"></i>Security</li>
-						<li><i class="icon-bug"></i>Bug Fix</li>
-						<li><i class="spacewalk-icon-enhancement"></i>Enhancement</li>
-					</ul>
-				<div>
-			</aside>
-			<section class="col-md-10">
-
-				<div class="spacewalk-toolbar pull-right">
-					<a class=""><i class="icon-plus"></i>Add</a>
-				    <a class=""><i class="icon-trash"></i>Remove</a>
-				    <a class=""><i class="icon-ok"></i>Upload</a>
-				</div>
-				<h1>
-					<i class="icon-dashboard"></i>Overview <span class="icon-stack"><i class="icon-circle icon-stack-base"></i><i class="icon-question icon-light"></i></span>
-				</h1>
-				<div class="row">
-					<div class="col-md-6" id="tasks-pane">
-						<form method="post" name="rhn_list" action="/YourRhn.do">
-							<table class="spacewalk-table">
-
-								<thead>
-								<tr class="active">
-								  <th style="text-align: left;">Tasks</th></tr>
-								</thead>
-
-						<tbody class="table-hover">
-							<tr class="list-row-odd">
-								<td style="text-align: left;"><img style="margin-left: 4px;" src="/img/parent_node.gif" alt="Bullet Item"> <strong>Manage Entitlements and Subscriptions</strong>:
-						    <br> &ensp; &ensp;<a href="/rhn/systems/SystemEntitlements.do">
-						    	My Organization</a> <strong>|</strong> <a href="/rhn/admin/multiorg/SoftwareEntitlements.do">Spacewalk-Wide
-						    </a>
-						</td>
-						</tr>
-
-						<tr class="list-row-odd">
-						<td style="text-align: left;"><img style="margin-left: 4px;" src="/img/parent_node.gif" alt="Bullet Item"> <a href="/rhn/activationkeys/List.do">
-						    	Manage <strong>Activation Keys</strong>
-						    </a></td></tr>
-
-						<tr class="list-row-odd">
-						<td style="text-align: left;"><img style="margin-left: 4px;" src="/img/parent_node.gif" alt="Bullet Item"> <a href="/rhn/kickstart/KickstartOverview.do">
-						    	Manage <strong>Kickstarts</strong>
-						    </a></td></tr>
-
-						<tr class="list-row-odd">
-						<td style="text-align: left;"><img style="margin-left: 4px;" src="/img/parent_node.gif" alt="Bullet Item"> <a href="/rhn/configuration/file/GlobalConfigFileList.do">
-						    	Manage <strong>Configuration Files</strong>
-						    </a></td></tr>
-
-						<tr class="list-row-odd">
-						<td style="text-align: left;"><img style="margin-left: 4px;" src="/img/parent_node.gif" alt="Bullet Item"> <a href="/rhn/admin/multiorg/Organizations.do">
-						    	Manage <strong>Spacewalk Organizations</strong>
-						    </a></td></tr>
-
-						<tr class="list-row-odd">
-						<td style="text-align: left;"><img style="margin-left: 4px;" src="/img/parent_node.gif" alt="Bullet Item"> <a href="/rhn/admin/config/GeneralConfig.do">
-						    	<strong>Configure</strong> Spacewalk
-						    </a></td></tr>
-
-
-						</tbody>
-						</table>
-						</form>
-					</div>
-					<div class="col-md-6" id="inactive-systems-pane"><div class="">
-					  <form method="post" name="rhn_list" action="/YourRhn.do">
-						  <table cellspacing="0" cellpadding="0" class="spacewalk-table">
-						  	<thead>
-						  		<tr>
-						  			<th>Inactive Systems</th>
-						  		</tr>
-						  	</thead>
-						  	<tbody>
-						  		<tr class="list-row-odd">
-						  			<td>
-						  				<strong>No inactive systems.</strong> <p>All of your systems are actively checking into Spacewalk at this time. You can view a list of all of your systems at <strong><a href="/rhn/systems/SystemList.do">Systems &gt; All</a></strong>.</p>
-						  			</td>
-						  		</tr>
-						  	</tbody>
-						  </table>
-						</form>
-					  </div>
-					</div>
-				</div>
-				<p>text text text</p>
-				<p>text text text</p>
-				<p>text text text</p>
-				<p>text text text</p>
-				<div class="spacewalk-content-nav">
-					<ul class="nav nav-tabs">
-						<li class="active"><a href="/rhn/systems/details/Overview.do?sid=1000010000">Details</a></li>
-						<li><a href="/rhn/systems/details/packages/Packages.do?sid=1000010000">Software</a></li>
-						<li><a href="/rhn/systems/details/configuration/Overview.do?sid=1000010000">Configuration</a></li>
-						<li><a href="/rhn/systems/details/kickstart/ScheduleWizard.do?sid=1000010000">Provisioning</a></li>
-						<li><a href="/rhn/systems/details/groups/ListRemove.do?sid=1000010000">Groups</a></li>
-						<li><a href="/rhn/systems/details/audit/ListScap.do?sid=1000010000">Audit</a></li>
-						<li><a href="/network/systems/details/history/pending.pxt?sid=1000010000">Events</a></li>
-					</ul>
-					<ul class="nav nav-tabs">
-						<li class="active"><a href="/rhn/systems/details/Overview.do?sid=1000010000">Overview</a></li>
-						<li><a href="/rhn/systems/details/Edit.do?sid=1000010000">Properties</a></li>
-						<li><a href="/rhn/systems/details/SystemRemoteCommand.do?sid=1000010000">Remote Command</a></li>
-						<li><a href="/network/systems/details/activation.pxt?sid=1000010000">Reactivation</a></li>
-						<li><a href="/rhn/systems/details/SystemHardware.do?sid=1000010000">Hardware</a></li>
-						<li><a href="/rhn/systems/details/SystemMigrate.do?sid=1000010000">Migrate</a></li>
-						<li><a href="/rhn/systems/details/Notes.do?sid=1000010000">Notes</a></li>
-						<li><a href="/rhn/systems/details/ListCustomData.do?sid=1000010000">Custom Info</a></li>
-					</ul>
-				</div>
-			</section>
-		</div>
+	<div class="w-main centered">
+	<section class="mtm clearfix" id="glyphs">
+	<header>
+		<h1>Spacewalk icons</h1>
+	</header>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe000;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe000;" />
 	</div>
-	<footer class="row">
-		<div class="col-xs-2"></div>
-		<div class="col-xs-8 text-center">
-			<p>Copyright Notice - Spacewalk theme Bootstrap 1.0</p>
-		</div>
-		<div class="col-xs-2 text-right"><img src="img/logo_vendor.png" /></div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe001;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe001;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe002;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe002;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe003;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe003;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe004;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe004;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe005;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe005;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe006;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe006;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe007;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe007;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe008;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe008;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe009;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe009;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe00a;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe00a;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe00b;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe00b;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe00c;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe00c;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe00d;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe00d;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe00e;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe00e;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe00f;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe00f;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe010;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe010;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe011;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe011;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe012;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe012;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe013;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe013;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe014;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe014;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe015;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe015;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe017;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe017;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe018;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe018;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe016;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe016;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe019;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe019;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe01a;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe01a;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe01b;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe01b;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe01c;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe01c;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe01d;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe01d;" />
+	</div>
+	<div class="glyph">
+		<div class="fs1" aria-hidden="true" data-icon="&#xe01e;"></div>
+		<input type="text" readonly="readonly" value="&amp;#xe01e;" />
+	</div>
+	</section>
+	<div class="clear"></div>
+	<section class="mtm clearfix" id="glyphs">
+	<header>
+		<h1>Class Names</h1>
+	</header>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-virtual-host"></span>
+		&nbsp;spacewalk-icon-virtual-host
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-virtual-guest"></span>
+		&nbsp;spacewalk-icon-virtual-guest
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-manage-autoinstallations"></span>
+		&nbsp;spacewalk-icon-manage-autoinstallations
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-locked-system"></span>
+		&nbsp;spacewalk-icon-locked-system
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-inactive-systems"></span>
+		&nbsp;spacewalk-icon-inactive-systems
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-unknown-system"></span>
+		&nbsp;spacewalk-icon-unknown-system
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-health"></span>
+		&nbsp;spacewalk-icon-health
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-Unentitled"></span>
+		&nbsp;spacewalk-icon-Unentitled
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-system-groups"></span>
+		&nbsp;spacewalk-icon-system-groups
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-health-unknown"></span>
+		&nbsp;spacewalk-icon-health-unknown
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-software-crashes"></span>
+		&nbsp;spacewalk-icon-software-crashes
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-health-pending"></span>
+		&nbsp;spacewalk-icon-health-pending
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-enhancement"></span>
+		&nbsp;spacewalk-icon-enhancement
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-software-channels"></span>
+		&nbsp;spacewalk-icon-software-channels
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-Software-Channel-Management"></span>
+		&nbsp;spacewalk-icon-Software-Channel-Management
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-download-csv"></span>
+		&nbsp;spacewalk-icon-download-csv
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-custom-system-info"></span>
+		&nbsp;spacewalk-icon-custom-system-info
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-register-system"></span>
+		&nbsp;spacewalk-icon-register-system
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-patches"></span>
+		&nbsp;spacewalk-icon-patches
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-configure-suse-manager"></span>
+		&nbsp;spacewalk-icon-configure-suse-manager
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-autoinstalling"></span>
+		&nbsp;spacewalk-icon-autoinstalling
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-clone-patches"></span>
+		&nbsp;spacewalk-icon-clone-patches
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-autoinstallations"></span>
+		&nbsp;spacewalk-icon-autoinstallations
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-organization-trust"></span>
+		&nbsp;spacewalk-icon-organization-trust
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-package-search"></span>
+		&nbsp;spacewalk-icon-package-search
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-packages"></span>
+		&nbsp;spacewalk-icon-packages
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-monitoring-status"></span>
+		&nbsp;spacewalk-icon-monitoring-status
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-manage-software-packages"></span>
+		&nbsp;spacewalk-icon-manage-software-packages
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-manage-patches"></span>
+		&nbsp;spacewalk-icon-manage-patches
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-manage-entitlements-subscriptions"></span>
+		&nbsp;spacewalk-icon-manage-entitlements-subscriptions
+	</span>
+	<span class="box1">
+		<span aria-hidden="true" class="spacewalk-icon-manage-configuration-files"></span>
+		&nbsp;spacewalk-icon-manage-configuration-files
+	</span>
+	</section>
+	<footer>
+		<p>Generated by <a href="http://icomoon.io">IcoMoon.io</a></p>
 	</footer>
+	</div>
+	<script>
+	document.getElementById("glyphs").addEventListener("click", function(e) {
+		var target = e.target;
+		if (target.tagName === "INPUT") {
+			target.select();
+		}
+	});
+	</script>
 </body>
 </html>
