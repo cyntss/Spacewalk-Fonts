@@ -18,6 +18,11 @@ $(document).on("ready", function(){
 		});
 	}
 });
+$(window).load(function (){
+	if ($("#sidenav li").attr("class", "active")){
+		$(this).next("ul").show(300);
+	});
+});
 
 // taking the screen size and resizing the columns to keep the footer fixed to the bottom
 // On page load
@@ -37,7 +42,7 @@ function columnHeight() {
 	//PLEASE: update this if you change the content of @screen-md
 	if ($(document).width()>992) {
 	    // Column heights should equal the document height minus the header height and footer height
-	    var newHeight = $(document).height() - 200 + "px";
+	    var newHeight = $(document).height() - 80 + "px";
 	    console.log(newHeight);
 	    $("aside").css("height", newHeight);
 	    $("section").css("height", newHeight);
