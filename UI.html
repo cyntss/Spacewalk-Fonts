@@ -13,15 +13,74 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 		$(document).on("ready",function(){
+			
 			$(".table-rounded").wrap("<div class='table-responsive'>");
+
+			$(".row-0").each(function(){
+				var NumberOfChildrenCol6 = $(this).children(".col-md-6").length;
+				var NumberOfChildrenDifferent = $(this).children().not('.col-md-6').length;
+			    if(NumberOfChildrenDifferent==0 && NumberOfChildrenCol6==1){
+					$(this).children(".col-md-6").removeClass('col-md-6').addClass('col-md-12');
+				}
+			});
 		});
 	</script>
+	
 	<link rel="stylesheet" href="css/normalize.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Spacewalk</title>
 </head>
 <body>
 	<div class="container">
+		<div class="row-0">
+			<div class="col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						sadsadsad
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						sadsadsad
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row-0">
+			<div class="col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						sadsadsad
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row-0">
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						sadsadsad
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						sadsadsad
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						sadsadsad
+					</div>
+				</div>
+			</div>
+		</div>
+		
 		<h1>This is a test of Twitter Bootstrap...and it works!</h1>
 		<a class="btn">Hello</a>
 		<i class="icon-camera-retro"></i>
@@ -30,7 +89,12 @@
 		<div class="btn btn-success"><span class="spacewalk-icons-BS-virtual-guest"></span> this is the Virtual Host icon</div>
 		<hr>
 		<h2>Trying FontAwesome</h2>
-		<div class="btn btn-success"><i class="icon-road icon-2x"></i> Icon from FontAwesome</div>
+		<div class="btn btn-success">
+			<i class="icon-road icon-2x"></i> Icon from FontAwesome
+			<p>Txto grnde<small>texto chico</small></p>
+			<h1>titulo <small>texto chico</small></h1>
+		</div>
+		<small>asdad</small>
 		<hr>
 		<a href="#">This is a link</a>
 		<hr />
@@ -396,7 +460,27 @@
 				</tr>
 			</tbody>
 		</table>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4>Titulo</h4>
+				<hr/>
+				<div class="spacewalk-list-top-wrap"><div class="spacewalk-list-filter"><input type="hidden" name="list_1680466951_oldfilterval" value=""><input type="hidden" name="list_1680466951_filterby" value="System Name"><div class="input-group input-group-sm"><input autofocus="autofocus" type="text" name="list_1680466951_filterval" value="" class="form-control" placeholder="Filter by System Name: "><span class="input-group-btn"><button value="Go" type="submit" name="list_1680466951_filtername" class="btn btn-default spacewalk-button-filter"><i class="icon-eye-open"></i></button></span></div></div><div class="spacewalk-list-top-pagination"><span id="list_min">1</span> - <span id="list_max">2</span> of <span id="list_total">2</span>&nbsp;&nbsp;</div></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="pull-left">
+				<div class="spacewalk-list-top-alphabar"><ul class="spacewalk-alphabar pagination pagination-sm"><li class="disabled"><a href="#">0</a></li><li class="disabled"><a href="#">1</a></li><li class="disabled"><a href="#">2</a></li><li class="disabled"><a href="#">3</a></li><li class="disabled"><a href="#">4</a></li><li class="disabled"><a href="#">5</a></li><li class="disabled"><a href="#">6</a></li><li class="disabled"><a href="#">7</a></li><li class="disabled"><a href="#">8</a></li><li class="disabled"><a href="#">9</a></li><li class="disabled"><a href="#">A</a></li><li class="disabled"><a href="#">B</a></li><li class="disabled"><a href="#">C</a></li><li class="disabled"><a href="#">D</a></li><li class="disabled"><a href="#">E</a></li><li class="disabled"><a href="#">F</a></li><li class="disabled"><a href="#">G</a></li><li class="disabled"><a href="#">H</a></li><li class="disabled"><a href="#">I</a></li><li class="disabled"><a href="#">J</a></li><li class="disabled"><a href="#">K</a></li><li><a href="/rhn/systems/Overview.do?list_1680466951_alpha_key=L">L</a></li><li class="disabled"><a href="#">M</a></li><li class="disabled"><a href="#">U</a></li><li class="disabled"><a href="#">V</a></li><li class="disabled"><a href="#">W</a></li><li class="disabled"><a href="#">X</a></li><li class="disabled"><a href="#">Y</a></li><li class="disabled"><a href="#">Z</a></li></ul></div>
+			</div>
+			<div class="pull-right">
+				<p> txt txt txt txt txt txt txt txt </p>
+			</div>
+
+		</div>
+		<hr/>
+		<div class="col-md-6">TASK</div>
+		<div class="col-md-6">SOMETHING</div>
 	</div>
+
 	<br />
 	<footer>
 		<div class="container">
