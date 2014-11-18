@@ -5,4 +5,9 @@ To modify your generated font, use the *dev.svg* file, located in the *fonts* fo
 
 See the documentation for more info on how to use this package: http://icomoon.io/#docs/font-face
 
-#icons created by Cynthia Sanchez - http://cynt.co.nf
+####Icon set created by Cynthia Sanchez - http://cynt.co.nf
+===============
+See other Open Source projects im working on:
+- Life It Up - Free Bootstrap Admin Panel: http://cyntss.github.io/Lifeitup-panel/
+- Parallax IMG scroll: http://cyntss.github.io/Parallax-img-scroll/
+- Trivialine - Multiplayer Rails Trivia Game: http://trivialine.herokuapp.com/
