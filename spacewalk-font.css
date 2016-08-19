@@ -1,16 +1,17 @@
 @font-face {
   font-family: 'spacewalk-icon';
-  src:url('fonts/spacewalk-icon.eot?-cm5fig');
-  src:url('fonts/spacewalk-icon.eot?#iefix-cm5fig') format('embedded-opentype'),
-      url('fonts/spacewalk-icon.woff?-cm5fig') format('woff'),
-      url('fonts/spacewalk-icon.ttf?-cm5fig') format('truetype'),
-      url('fonts/spacewalk-icon.svg?-cm5fig#spacewalk-icon') format('svg');
+  src:  url('fonts/spacewalk-icon.eot?loun6n');
+  src:  url('fonts/spacewalk-icon.eot?loun6n#iefix') format('embedded-opentype'),
+    url('fonts/spacewalk-icon.ttf?loun6n') format('truetype'),
+    url('fonts/spacewalk-icon.woff?loun6n') format('woff'),
+    url('fonts/spacewalk-icon.svg?loun6n#spacewalk-icon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
 [class^="spacewalk-icon-"], [class*=" spacewalk-icon-"] {
-  font-family: 'spacewalk-icon';
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'spacewalk-icon' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -194,6 +195,10 @@
 .spacewalk-icon-unknown-system:before {
   content: "\e633";
 }
+.spacewalk-icon-old-tandc:before {
+  content: "\e900";
+}
 .spacewalk-icon-bare-metal:before {
   content: "\e623";
 }
+
