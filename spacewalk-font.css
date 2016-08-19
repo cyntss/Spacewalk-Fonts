@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'spacewalk-icon';
-  src:  url('fonts/spacewalk-icon.eot?loun6n');
-  src:  url('fonts/spacewalk-icon.eot?loun6n#iefix') format('embedded-opentype'),
-    url('fonts/spacewalk-icon.ttf?loun6n') format('truetype'),
-    url('fonts/spacewalk-icon.woff?loun6n') format('woff'),
-    url('fonts/spacewalk-icon.svg?loun6n#spacewalk-icon') format('svg');
+  src:  url('fonts/spacewalk-icon.eot?pfk5fe');
+  src:  url('fonts/spacewalk-icon.eot?pfk5fe#iefix') format('embedded-opentype'),
+    url('fonts/spacewalk-icon.ttf?pfk5fe') format('truetype'),
+    url('fonts/spacewalk-icon.woff?pfk5fe') format('woff'),
+    url('fonts/spacewalk-icon.svg?pfk5fe#spacewalk-icon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -195,7 +195,7 @@
 .spacewalk-icon-unknown-system:before {
   content: "\e633";
 }
-.spacewalk-icon-old-tandc:before {
+.spacewalk-icon-doc-error:before {
   content: "\e900";
 }
 .spacewalk-icon-bare-metal:before {
