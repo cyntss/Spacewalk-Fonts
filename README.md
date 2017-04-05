@@ -7,7 +7,7 @@ To modify your generated font, use the *spacewalk-icon.svg* file, located in the
 
 See the documentation for more info on how to use this package: http://icomoon.io/#docs/font-face
 
-####Icon set created by Cynthia Sanchez - http://cynt.co.nf
+### Icon set created by Cynthia Sanchez - http://cynt.co.nf
 ===============
 See other Open Source projects im working on:
 - Life It Up - Free Bootstrap Admin Panel: http://cyntss.github.io/Lifeitup-panel/
