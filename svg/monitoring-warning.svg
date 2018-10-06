@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512"
+   height="512"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="monitoring-warning.svg"
+   inkscape:export-filename="/Users/Cynthia/Documents/SUSE manager/new icons/Locked-system/BS-locked-system.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="286.49033"
+     inkscape:cy="291.29957"
+     inkscape:document-units="px"
+     inkscape:current-layer="text2986"
+     showgrid="false"
+     inkscape:window-width="1099"
+     inkscape:window-height="647"
+     inkscape:window-x="25"
+     inkscape:window-y="22"
+     inkscape:window-maximized="0"
+     showguides="true"
+     inkscape:guide-bbox="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-540.36217)">
+    <g
+       style="font-size:477.8666687px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:FontAwesome;-inkscape-font-specification:FontAwesome"
+       id="text2985" />
+    <g
+       style="font-size:83.60554504px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:FontAwesome;-inkscape-font-specification:FontAwesome"
+       id="text2989"
+       transform="translate(577.14288,328.57143)">
+      <g
+         style="font-size:268.13122559px;fill:#000000;font-family:FontAwesome;-inkscape-font-specification:FontAwesome"
+         id="text2986"
+         transform="translate(12.231164,0)">
+        <path
+           d="M 395.71875 26.59375 C 389.76363 26.59375 384.31876 29.9301 381.53125 35.125 L 284.25 213.5 C 281.4625 218.44148 281.55454 224.52727 284.46875 229.46875 C 287.38296 234.41023 292.70454 237.4375 298.40625 237.4375 L 493.03125 237.4375 C 498.73296 237.4375 504.05454 234.41023 506.96875 229.46875 C 509.88296 224.52727 510.00626 218.44148 507.21875 213.5 L 409.90625 35.125 C 407.11875 29.9301 401.67387 26.59375 395.71875 26.59375 z M 381.8125 91.46875 L 409.65625 91.46875 C 410.79659 91.46875 411.95852 92.24148 412.71875 92.875 C 413.60569 93.50852 413.96875 94.52102 413.96875 95.28125 L 411.6875 153.4375 C 411.56079 155.08466 409.65568 156.34375 407.375 156.34375 L 383.9375 156.34375 C 381.53011 156.34375 379.65625 155.08466 379.65625 153.4375 L 377.5 95.53125 C 377.5 94.77102 377.86307 93.50852 378.75 92.875 C 379.51023 92.24148 380.67215 91.46875 381.8125 91.46875 z M 35.59375 135.40625 C 17.11832 135.40625 2 150.49332 2 168.96875 L 2 397.4375 C 2 415.91293 17.11832 431 35.59375 431 L 149.78125 431 C 149.78125 449.26548 136.375 463.54442 136.375 471.3125 C 136.375 478.66067 142.43307 484.75 149.78125 484.75 L 257.3125 484.75 C 264.66069 484.75 270.71875 478.66067 270.71875 471.3125 C 270.71875 463.96432 257.3125 448.84558 257.3125 431 L 371.5 431 C 389.97543 431 405.09375 415.91293 405.09375 397.4375 L 405.09375 265.4375 L 378.25 265.4375 L 378.25 343.6875 C 378.25 347.25661 375.06912 350.375 371.5 350.375 L 35.59375 350.375 C 32.02463 350.375 28.84375 347.25661 28.84375 343.6875 L 28.84375 168.96875 C 28.84375 165.39963 32.02463 162.28125 35.59375 162.28125 L 280.3125 162.28125 L 294.9375 135.40625 L 35.59375 135.40625 z M 383.5625 172.5625 L 407.90625 172.5625 C 410.18693 172.5625 411.9375 174.46932 411.9375 176.75 L 411.9375 200.8125 C 411.9375 203.09318 410.18693 205 407.90625 205 L 383.5625 205 C 381.28181 205 379.5 203.09318 379.5 200.8125 L 379.5 176.75 C 379.5 174.46932 381.28181 172.5625 383.5625 172.5625 z M 151.96875 172.96875 L 81 303.21875 L 37.78125 303.21875 L 37.78125 333.65625 L 95.5 333.65625 L 95.5 333.375 L 95.875 333.75 L 151.0625 229.96875 L 208.40625 334.25 L 208.40625 334.40625 L 208.46875 334.40625 L 208.59375 334.59375 L 208.84375 334.40625 L 252.9375 334.40625 L 252.9375 333.28125 L 282.90625 271.46875 L 313.09375 333.84375 L 313.40625 333.65625 L 370.90625 333.65625 L 370.90625 303.21875 L 326.78125 303.21875 L 306.9375 265.4375 L 298.40625 265.4375 C 286.03158 265.4375 274.40624 260.22521 266.15625 251.40625 L 238.59375 304 L 223.375 304 L 152.46875 173.84375 L 152.4375 173.875 L 151.96875 172.96875 z "
+           transform="translate(-589.37404,211.79074)"
+           id="path2991" />
+      </g>
+    </g>
+  </g>
+</svg>
